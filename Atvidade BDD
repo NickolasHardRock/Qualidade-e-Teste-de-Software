@@ -3,11 +3,17 @@ BDD das rotinas do sistema (CRUD+Login)
 Salve separadamento no repositório.(Anote também os princípios de teste)
 
 1-Cenário  Create:
-
+DADO que estou craindo uma nova ocorrencia de um aluno, e preencho os campos com suas informações, QUANDO 
+clico no botão SALVAR ENTÂO o sistema exibe uma mensagem dizendo que a ocerrencia foi salva.
 2-Cenário  Read:
-
+DADO que estou abrindo a ficha de um aluno QUANDO clico no botão com figura de Lupa ENTÂO uma segunda página 
+e aberto mostrando as informações.
 3-Cenário  Update
-
+DADO que estou adicionado uma ocorrencia a um aluno, e preencho os campos com suas informações, QUANDO 
+clico no botão SALVAR ENTÂO o sistema exibe uma mensagem dizendo que a ocerrencia foi salva.
 4-Cenário  Delete:
-
+DADO que estou excluindo ocorrencias de um aluno, QUANDO clico no botão SALVAR 
+ENTÂO o sistema exibe uma mensagem dizendo as ocerrencias foram salvas.
 5-Cenário  Login:
+Dado que estou na tela de login e  preencho minhas informações, QUANDO clico no botão de LOGAR, 
+ENTÂO o sitema irá vericar meu login e abrir a tela principal.
