@@ -1,7 +1,5 @@
 # Qualidade-e-Teste-de-Software
 
-Pesquisa
-
 Quais as características de um Tester Ágil? Em quais momentos o Testes Ágil aparece no desenvolvimento de um software? (Detalhe)
 R:
 O Tester Ágil usa o mindset Ágil para tornar seu trabalho mais eficiente e entregar maior valor ao negócio. 
@@ -22,3 +20,4 @@ mesmo sendo, aplicado por desenvolvedores experientes ainda podera haver erros, 
   ° Melhorias ainda podem passar desapercebidas;
   ° Bugs podem não ser detectados;
 Code review é útil porém, ainda deve ser aplicado com outros métodos de segurança.
+
