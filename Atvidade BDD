@@ -17,3 +17,9 @@ ENTÂO o sistema exibe uma mensagem dizendo as ocerrencias foram salvas.
 5-Cenário  Login:
 Dado que estou na tela de login e  preencho minhas informações, QUANDO clico no botão de LOGAR, 
 ENTÂO o sitema irá vericar meu login e abrir a tela principal.
+
+
+Principios de Teste
+
+Primeiro
+O teste mostra a presença de defeitos e não a sua ausência. O teste redua probabilidade de defeitos não descobertos permanecerem 
