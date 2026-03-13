@@ -1,0 +1,13 @@
+Com base em uma rotina de CRUD de usuários (incluindo a função Login) em um sistema Web simples, faca o
+BDD das rotinas do sistema (CRUD+Login)
+Salve separadamento no repositório.(Anote também os princípios de teste)
+
+1-Cenário  Create:
+
+2-Cenário  Read:
+
+3-Cenário  Update
+
+4-Cenário  Delete:
+
+5-Cenário  Login:
