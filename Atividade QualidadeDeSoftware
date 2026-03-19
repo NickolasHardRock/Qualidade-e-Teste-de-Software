@@ -1,0 +1,87 @@
+
+7 Princípios de Teste
+
+1° - Primeiro
+  O teste mostra a presença de defeitos é não a sua ausência
+
+O teste reduz a probabildade de defeitos não descobertos permanecerem
+no software, mas, mesmo se nenhum defeito for encontrado, o teste é uma 
+prova de correção.
+Exemplo: 
+  Imagine por exemplo, um software que possua uma suíte de testes automa-
+tizados que é executada em um determinado momento e, todos os testes 
+dessa suíte não encontraram nenhum defeito durante a execução.
+O fato de todos os testes terem passado sem falhar não é uma certeza
+de que o software esteja livre de outros defeitos, especialmente em
+partes em que a suíte de testes possa não estar com a cobertura adequada.
+
+2° - Segundo
+  Teste exaustivos são impossíveis 
+
+Testar tudo (todas as combinações de entradas e précondições) não é viável, 
+exceto em casos triviais. Em vez de tentar testar exaustivamente, a análise 
+de risco, as técnicas de teste e as priopriedades devem ser usadas para 
+concentrar os esforços de teste.
+Exemplo:
+   Um formulário com 10 campos de texto tem combinações infinitas, tornando 
+impossível testar todas.
+
+3° - Terceiro
+  O teste inicial economiza tempo e dinheiro
+
+Para encontrar antecipadamente os defeitos, as atividades de teste estático
+e dinâmico devem ser iniciadas o mais cedo possível no ciclo de vida de de-
+senvolvimeto de software. O teste inicial é por vezes referido como shift left.
+O teste no início do ciclo de vida de desenvolvimento de software ajuda a redu-
+zir ou eliminar alterações dispendiosas.
+Exemplo:
+  A análise estática do código-fonte é um exemplo de teste estático, e ela pode 
+ocorrer durante code reviews manuais ou por meio de ferramentas(Como o Sonar-
+Qube, por exemplo) sem a necessidade de execução do software. Já exemplos de 
+teste dinâmicos comumentes aplicados em shift left podem envolver testes de 
+unidade e intregração.
+
+4° - Quarto 
+  Defeitos se agrupam 
+
+Um pequeno número de módulos geralmente contém a maioria dos defeitos des-
+cobertos durante o teste de pré-lançamento ou é responsável pela maioria 
+das falhas operacionais. Agrupamento de defeitos previstos e os agrupa-
+mentos de defeitos observados reais em teste ou produção, são uma entra-
+da importante em uma análise de risco usada para focar o esforço de teste.
+Exemplo: 
+  Agrupamento de defeitos (Princípio de Pareto): Geralmente, 80% dos defeitos estão contidos em 20% dos módulos.
+A funcionalidade de "checkout" de um e-commerce costuma concentrar a maioria dos bugs.
+
+5° - Quinto 
+  Cuidado com o paradoxo do pesticida
+
+Se os mesmo teste forem repetidos várias vezes, esses testes não encontrarão novos defeitos. Para detectar
+novos defeitos, os testes existentes e os dados de teste podem precisar ser alterados e novos testes precisam
+ser gravados. (Testes não são mais eficazes em matar insetos depois de um tempo).
+Exemplo:
+  O Círculo Vicioso da Resistência: O uso contínuo do mesmo ingrediente ativo elimina os
+indivíduos sensíveis da praga, permitindo que apenas aqueles com resistência natural 
+sobrevivam e se reproduzam. Isso gera populações de pragas que não respondem mais ao 
+pesticida original, exigindo doses maiores ou produtos mais fortes (efeito coquetel).
+
+6° - Sexto
+
+  O teste depende do contexto 
+
+O teste é feito de forma diferente em diferentes contextos. Por exemplo, o software de 
+controle industrial de segurança crítica é testado de forma diferente de um aplicativo
+móvel de comércio eletrônico. Como outro exemplo, o teste em um projeto ágil é feito de
+forma diferente do que o teste em um projeto de ciclo de vida sequencial.
+Exemplo:
+  Um app bancário precisa de segurança extrema, enquanto um jogo foca em desempenho e experiência do usuário.
+
+7° - Sétimo  
+  Ausência de erros é uma ilusão 
+Além disso, é uma ilusão esperar que apenas encontrar e corrigir um grande número de defeitos assegure o sucesso de um
+sistema. Por exemplo, testar exaustivamente todos os requisitos especificados e corrigir todos os defeitos encontrados
+ainda pode produzir um sistema difícil de usar, que não atenda às necessidades e expectativas dos usuários ou que seja
+inferior em comparação com outros sistemas concorrentes.
+Exemplo:  
+  Software está perfeito tecnicamente, mas a funcionalidade foi construída baseada 
+em um requisito errado que o cliente não queria.
