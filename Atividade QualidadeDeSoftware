@@ -85,3 +85,42 @@ inferior em comparação com outros sistemas concorrentes.
 Exemplo:  
   Software está perfeito tecnicamente, mas a funcionalidade foi construída baseada 
 em um requisito errado que o cliente não queria.
+
+Pirâmide de Testes
+
+O que é a pirâmide de teste:
+  O conceito de pirâmide de testes, foi de introduzida por Mike Cohn, ele introduziu a Pirâmide de Teste em seu livro de 2009 
+Succeding with Agile: Software Development Using Scrum.  Cohn propôs que a pirâmide de teste poderia enfrentar desafios no 
+gerenciamento de teste automatizados no desenvolvimento de software, especialmente ao seguir metodologias Ágeis. A ideia 
+principal era incentivar desenvolvedores e testadores a pensarem sobre diferentes níveis de testes e a equilibrar seus esforços 
+entre esses níveis de teste e a equilibrar seus esforços entre esses níveis
+
+As Camadas da Pirâmide: Uma Visão Geral
+ A pirâmide é visualmente dividida em três camadas principais, cada uma com um papel específico e diferentes trade-offs:
+ * Teste End-To-End(E2E): A validação da experiência completa. --> Topo
+ * Testes de Integração: A conexão entre as partes. --> Meio
+ * Testes Unitários: A base sólida. --> Base 
+
+Testes End-To-End (E2E): Validando a Experiência do Usuário
+  No top da pirâmide, os testes E2E simulam a jornada de um usuário real interagindo com sua aplicação. Pense em um teste
+de cadastro: o script abriria o site, preencheria os campos, submeteria o formulário e verificaria o resultado, passando
+pelo frontend, backend, banco de dados e qualquer outro serviço envolvido.
+
+Valor do E2E:
+   * Máximo para o Negócio: Garante que a funcionalidade crítica está operando com esperado do início ao fim, sob a perspec-
+tiva do usuário.
+ * Alta Confiança: Um conjunto de testes E2E bem-sucedido transmite grande confiança sobre a saúde geral da aplicação.
+
+Custo do E2E:
+  * Altíssimo: São os teste mais caros para desenvolver, manter e executar.
+  * Depuração Complexa: Identificar a causa raiz de uma falha pode ser demorado,
+já que muitos componentes estão envolvidos.
+  * Ambiente Exigente: Requerem um ambiente de testes o mais fiel possível ao de produção, o que pode ser custoso e 
+complexo de configurar.
+
+
+https://dev.to/stephanto/piramide-de-testes-do-unitario-ao-e2e-introducao-5f0
+
+https://circleci.com/blog/testing-pyramid/
+
+
