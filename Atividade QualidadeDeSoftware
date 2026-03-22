@@ -1,4 +1,6 @@
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
 7 Princípios de Teste
 
 1° - Primeiro
@@ -86,6 +88,8 @@ Exemplo:
   Software está perfeito tecnicamente, mas a funcionalidade foi construída baseada 
 em um requisito errado que o cliente não queria.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
 TDD
 
 TDD é o Desenvolvimento Orientado por Teste (Test Driven Development), ou seja, primeiro criamos os teste depois o código
@@ -167,11 +171,84 @@ software, quando o teste passar, criaremos outro teste e o ciclo continua até q
 vido.
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
 BDD
 
   TDD funciona, já foi testado e compravado, mas ainda assim existem várias dúvidas quando se vai criar um TDD, 
 como por exemplo: por onde começar, o que testar e o que não testar ? 
-  O BDD, na prática, é um complemento 
+  O BDD, na prática, é um complemento (ou evolução) do TDD. Embora muitas pessoas acreditem que ele veio para 
+substituir o TDD.
+
+BDD é o Desenvolvimento Orientado ao Comportamento (Behaviuor Driven Development)
+  " O TDD conta com testes de unidade para verificar detalhes da implementação, enquanto o BDD conta com
+cenários executáveis para verificar os comportamentos e muitos mais."
+
+Definição Syllabus
+  " BDD é uma técnica na qual os desenvolvedores, os testadores e os representantes do negócio
+trabalham juntos para analisar os requisistos de um sistema de software, desenvolvê-los usando 
+uma linguagem compartilhada e verificá-los automaticamente."
+
+Ciclo de Vida BDD
+
+1. Escrever um teste de funcionalidade que falha
+  * Diferente do TDD aqui o teste é escrito em uma linguagem próxima ao natural( Exemplo:
+Gherkin: Given, When, Then).
+  * Esse teste descreve o comportamento esperado do sistema do ponto de vista do usuário ou 
+regra  de negócio.
+
+2. Executar o teste e ver que ele falha
+  * Isso confirma que a funcionalidade ainda não existe ou não está implementada corretamente.
+
+3. Implementar o código mínimo necessário
+  * O desenvolvedor escreve apenas o suficiente para que o teste de comportamento passe.
+  * Esse passo pode envolver vários ciclos internos de TDD (escrever teste unitário ->
+fazer passar -> refatorar).
+
+4. Refatorar
+  * Melhorar o código sem alterar o comportamento.
+  * Os testes garantem que nada foi quebrado.
+
+5. Repetir o ciclo 
+  * Novos cenários de comportamento são escritos, novos testes falham, e o processo continua
+até que todas as funcionalidades esperadas estejam cobertas.
+
+Prós 
+
+* O time se une para alcançar um objetivo em comum com entendimento de todos.
+* Visão do todo e não apenas do seu papel dentro do projeto.
+* Identifica possíveis falhas no sistema durante a elaboração do BDD.
+
+Contras
+
+* Os Cenários precisam ser claros, curtos e objetivos.
+
+Cénarios
+
+* Given: dado um determinado contexto (tem-se determinado reação);
+* When: quando ocorrer algo;
+* Then: então se espera algo.
+É possivel identificar as pré-condições, a ação realizada e o resultado esperado.
+
+Exemplo 1: 
+
+DADO que estou na tela de login, E preencho os campos <login> e <senha>, 
+ENTÃO o sistema irá autenticar a conta 
+e exibirá uma mensagem de bem-vindo
+
+Exemplo 2:
+DADO que estou cadastrando um produto, E preencho os
+campos <nome> e <preço>, QUANDO clico no botão <Salvar>
+ENTÃO o sistema irá cadastrar o produto e redirecionar para
+a listagem.
+
+Exemplo 3:
+DADO que estou alterando um cliente, E modifico os dados
+<nome>,<salario> e <cep>, QUANDO clico no botão <Salvar>
+ENTÃO o sistema irá alterar o cliente e redirecionar para a
+listagem.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Pirâmide de Testes
@@ -205,6 +282,46 @@ Custo do E2E:
 já que muitos componentes estão envolvidos.
   * Ambiente Exigente: Requerem um ambiente de testes o mais fiel possível ao de produção, o que pode ser custoso e 
 complexo de configurar.
+
+Testes Unitários: A Fundação Sólida
+
+Na base da pirâmide, os testes unitários focam na menor unidade de código isolável: uma
+função, um método ou uma classe pequena. O objetivo é simples: para uma entrada X, espe-
+ramos uma saída Y. Testamos diversos cenários, incluindo caminhos felizes e casos exceção.
+
+Custo dos Unitários:
+* Baixíssimo: São baratos para escrever, executar e manter.
+* Feedback Rápido: Executam em milissegundos, fornecendo feedback quase
+instantâneo aos desenvolvedores.
+* Depuração Fácil: Quando um teste unitário falha, o problema geralmente está 
+contido na pequena unidade testada.
+
+Valor dos Unitários:
+
+* Menor Valor Isolado (para o Negócio): Sozinhos, não garantem que a aplicação 
+inteira funcione. Muitas unidades funcionando perfeitamente em isolamento podem
+falhar ao serem integradas.
+* Base Crucial para a Qualidade: Apesar disso, são a fundação! Ajudam a garantir que cada "tijolo" da sua aplicação é confiável.
+* Guia de Design: Incentivam um bom design de código (baixo acoplamento, alta coesão) e revelam problemas como falta de abstração ou injeção de dependência inadequada.
+* Documentação Viva: Descrevem como cada unidade de código deve se comportar.
+* Grande Quantidade: São os testes mais numerosos em uma codebase saudável.
+
+Testes de Integração: Conectando os Pontos
+
+Localizados no meio da pirâmide, os testes de integração verificam se diferentes unidades ou componentes do sistema se comunicam e colaboram 
+corretamente. Se os testes unitários garantem que os tijolos são bons, os de integração garantem que eles se encaixam. Aqui, pode ser válido
+interagir com um banco de dados real (geralmente em uma instância de teste, de menor escala) 
+ou outros serviços externos para validar essa comunicação.
+
+Valor da Integração:
+* Médio: Fornecem uma boa visão para os desenvolvedores sobre como diferentes partes da aplicação interagem e como os recursos são utilizados.
+* Confiança na Colaboração: Aumentam a confiança de que os módulos principais funcionam bem juntos.
+* Indicador de Saúde: Embora não representem a experiência final do usuário, dão um bom panorama do estado da aplicação.
+
+Custo da Integração:
+* Médio: São mais caros e lentos que os testes unitários, pois envolvem múltiplos componentes.
+* Depuração Moderada: Identificar falhas pode ser mais complexo que nos testes unitários, mas geralmente mais simples que nos E2E.
+* Recursos: Podem exigir mais recursos de setup (ex: um banco de dados de teste) do que os unitários.
 
 
 https://dev.to/stephanto/piramide-de-testes-do-unitario-ao-e2e-introducao-5f0
