@@ -1,7 +1,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-7 Princípios de Teste
+                                                              7 Princípios de Teste
 
 1° - Primeiro
   O teste mostra a presença de defeitos é não a sua ausência
@@ -90,7 +90,7 @@ em um requisito errado que o cliente não queria.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-TDD
+                                                              TDD
 
 TDD é o Desenvolvimento Orientado por Teste (Test Driven Development), ou seja, primeiro criamos os teste depois o código
 de produção.
@@ -173,7 +173,7 @@ vido.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-BDD
+                                                            BDD
 
   TDD funciona, já foi testado e compravado, mas ainda assim existem várias dúvidas quando se vai criar um TDD, 
 como por exemplo: por onde começar, o que testar e o que não testar ? 
@@ -250,8 +250,7 @@ listagem.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-Pirâmide de Testes
+                                              Pirâmide de Testes
 
 O que é a pirâmide de teste:
   O conceito de pirâmide de testes, foi de introduzida por Mike Cohn, ele introduziu a Pirâmide de Teste em seu livro de 2009 
@@ -323,9 +322,37 @@ Custo da Integração:
 * Depuração Moderada: Identificar falhas pode ser mais complexo que nos testes unitários, mas geralmente mais simples que nos E2E.
 * Recursos: Podem exigir mais recursos de setup (ex: um banco de dados de teste) do que os unitários.
 
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-https://dev.to/stephanto/piramide-de-testes-do-unitario-ao-e2e-introducao-5f0
+                                                      Níveis de Teste
 
-https://circleci.com/blog/testing-pyramid/
+
+Teste de Componentes
+
+  O teste de componente (também conhecido como teste de unidade ou módulo) 
+se concentra em componentes que são testáveis separadamente.
+
+Defeitos típicos e falhas
+  * Funcionalidade incorreta
+  * Problemas no fluxo de dados
+  * Código e lógica incorretos
+
+Exemplo 
+
+Teste de Integração
+
+  O teste de integração se concentra nas interações 
+entre componentes ou sistemas.
+
+Defeitos típicos e falhas
+
+• Dados incorretos, dados ausentes ou codificação de dados incorreta.
+• Sequenciamento ou temporização incorretos de chamadas de interface.
+• Incompatibilidade de interface.
+• Falhas na comunicação entre componentes.
+• Falha de comunicação não manipulada ou tratada de forma errada entre
+componentes.
+• Suposições incorretas sobre o significado, as unidades ou limites dos dados que
+estão sendo transmitidos entre os componentes.
 
 
