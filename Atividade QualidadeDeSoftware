@@ -86,6 +86,94 @@ Exemplo:
   Software está perfeito tecnicamente, mas a funcionalidade foi construída baseada 
 em um requisito errado que o cliente não queria.
 
+TDD
+
+TDD é o Desenvolvimento Orientado por Teste (Test Driven Development), ou seja, primeiro criamos os teste depois o código
+de produção.
+
+Definição Syllabus
+  "O desenvolvimento orientado a teste é altamente iterativo e é baseado em ciclos de desenvolvimento de casos de tes auto-
+matizados, em seguida, na criação e integração de pequenos trechos de código, executando os testes de componentes, corrigindo
+quaisquer problemas e regerando o código. Esse processo continua até que o componente tenho sido completamente construído e 
+todos os testes de componentes estejam passando."
+
+Ciclo de vida TDD
+
+Test fails -> Test passes  
+    ^         |
+    |         V
+      Refactor
+Test fails: Escreva um pequeno teste automatizado que, ao ser executado, irá falhar;
+Test passes: Implemente um código que seja suficiente para ser aprovado no teste recém-escrito;
+Refactor: refatore o código, a fim dele ser melhorado, deixando-o mais funcional e mais limpo.
+
+Beneficios: 
+Feedback rápido e contínuo;
+Código mais limpo;
+Segurança no Refatoramento de Código;
+Maior produtividade;
+Menor possibilidade de falhas;
+
+Teste Unitário
+Testes unitários devem ser confiáveis, simples, independentes e rápidos, 
+porque sua função é dar segurança ao código sem atrapalhar o fluxo de desenvolvimento.
+
+Suas caracteristicas são:
+
+Determinístico: Toda vez que é executado nas mesmas condições ele deve produzir os mesmos resultados.
+Atômico: Deve testar apenas a funcionalidade relacionada a ele.
+Isolado: Não deve depender de outro e deve evitar dependências no código em produção sempque possível.
+Rápido: Deve ser pequeno e rápido para fornecer feedback imediato.
+
+Exemplo de TDD
+
+Pass 1 - O Escrever um teste antes da função:
+
+import unittest
+
+class TestNumeroPrimo(unittest.TestCase):
+    def test_numero_primo(self):
+        # Esperamos que 7 seja primo
+        self.assertTrue(eh_primo(7))
+        # Esperamos que 8 não seja primo
+        self.assertFalse(eh_primo(8))
+        # 2 é primo
+        self.assertTrue(eh_primo(2))
+        # 1 não é primo
+        self.assertFalse(eh_primo(1))
+
+if __name__ == '__main__':
+    unittest.main()
+
+Aqui o teste vai falhar, porque ainda não existe a função eh_primo.
+
+Passo 2 – Implementamos o código mínimo para passar no teste:
+
+def eh_primo(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+Passo 3 – Rodamos os testes
+Agora ao rodar python testeDoTeste.py, todos os testes devem passar.
+
+Resumindo TDD
+  Antes de se pensar em programar o software em si, será necessário pensar no teste unitário que irá
+cobrir o código, será então executado o teste, ele irá falhar, depois será implementado o código do 
+software, quando o teste passar, criaremos outro teste e o ciclo continua até que tudo seja desenvol-
+vido.
+
+
+BDD
+
+  TDD funciona, já foi testado e compravado, mas ainda assim existem várias dúvidas quando se vai criar um TDD, 
+como por exemplo: por onde começar, o que testar e o que não testar ? 
+  O BDD, na prática, é um complemento 
+
+
 Pirâmide de Testes
 
 O que é a pirâmide de teste:
