@@ -337,7 +337,12 @@ Defeitos típicos e falhas
   * Problemas no fluxo de dados
   * Código e lógica incorretos
 
-Exemplo 
+Exemplo: 
+Um teste de componentes em qualidade de software é feito para verificar se cada parte isolada do sistema funciona corretamente antes de ser integrada com os demais módulos. 
+Por exemplo, em um sistema de e-commerce, podemos testar o componente responsável pelo cálculo de frete. Nesse teste, fornecemos entradas como peso do produto, CEP de destino e 
+tipo de entrega, e verificamos se o resultado corresponde ao esperado. Se o peso for 2kg e a entrega normal, o sistema deve retornar R$ 20,00; se for 5kg e entrega expressa, 
+deve retornar R$ 50,00; e se o peso for inválido ou o CEP incorreto, deve apresentar uma mensagem de erro. 
+Esse tipo de teste garante que cada função básica do software esteja correta e confiável, evitando que falhas se propaguem para fases posteriores como integração ou testes de sistema.
 
 Teste de Integração
 
@@ -355,4 +360,242 @@ componentes.
 • Suposições incorretas sobre o significado, as unidades ou limites dos dados que
 estão sendo transmitidos entre os componentes.
 
+Exemplo:
 
+Pensamos novamente em um sistema de e-commerce. Já testamos isoladamente o cálculo de frete e o módulo de pagamento. No teste de integração, avaliamos se eles trabalham juntos sem problemas. 
+
+O cenário seria: o usuário adiciona um produto ao carrinho, escolhe o endereço de entrega e o sistema calcula o frete; em seguida, o valor total (produto + frete) é enviado para o módulo de pagamento. 
+O teste verifica se o valor final é transmitido corretamente e se o pagamento é processado sem erros.
+
+Se o cálculo de frete retornar R$ 20,00 e o produto custar R$ 100,00, o módulo de pagamento deve receber R$ 120,00. Caso o frete esteja inválido ou o pagamento não aceite o valor, 
+o sistema deve apresentar uma mensagem de erro.
+
+Esse tipo de teste garante que os módulos, mesmo funcionando bem sozinhos, também se comuniquem de forma correta quando integrados, evitando falhas na experiência completa do usuário.
+
+Teste de Sistema
+
+O teste de sistema se concentra no comportamento e nas capacidades de todo um sistema ou produto, geralmente considerado as execuções das tarefas de ponta a ponta do sistema e os comportamentos não 
+funcionais exibidos ao executar tais tarefas.
+
+Defeitos típicos e falhas
+
+* Cálculo incorretos
+* Comportamento funcional ou não funcional do sistema incorreto ou inesperado.
+* Controle e/ ou fluxos de dados dentro do sistema incorretos.
+* Falha na execução correta e completa de tarefas funcionais de ponta a ponta.
+* Falha do sistema em funcionar adequadamente no(s) ambiente(s) de produção.
+* Falha do sistema para funcionar conforme descrito nos manuais do sistema e do usuário.
+
+Exemplo: 
+Por exemplo, em um sistema de e-commerce, o teste de sistema pode simular o processo completo de compra: o usuário faz login, escolhe um produto, 
+adiciona ao carrinho, calcula o frete, realiza o pagamento e recebe a confirmação do pedido. O objetivo é garantir que todas essas etapas 
+funcionem corretamente em conjunto, que os dados sejam transmitidos sem falhas entre os módulos e que o resultado final corresponda ao esperado.
+
+Se o usuário comprar um produto de R$ 100,00 com frete de R$ 20,00, o sistema deve apresentar o valor total de R$ 120,00, processar o pagamento e gerar a confirmação da compra. 
+Caso algum módulo falhe — por exemplo, o cálculo de frete não aparecer ou o pagamento não ser processado — o teste de sistema identifica o problema.
+
+Esse tipo de teste é essencial porque valida a experiência completa do usuário, garantindo que o software esteja pronto para uso em ambiente real.
+
+Teste de Aceite
+O teste de aceite, como o teste do sistema, geralmente se concentra no comportamento e na capacidade de todo um sistema ou produto. 
+Formas comuns de testes de aceite incluem o seguinte:
+
+• Teste de aceite do usuário: com o usuário, simulando uso real;
+• Teste de aceite operacional: com o time, simulando “devops” em
+ambiente similar a prod;
+• Teste de aceite contratual e regulatório: com todos para atender a
+contrato ou ao gov;
+• Teste Alfa e Beta: Alfa o usuário testa em “desenvolvimento”, Beta o
+usuário testa após o desenvolvimento, como prod.
+
+Defeitos típicos e falhas
+
+• Fluxos de trabalho do sistema não atendem aos requisitos do negócio ou do usuário.
+• Regras de negócios não são implementadas corretamente.
+• O sistema não satisfaz os requisitos contratuais ou regulatórios.
+• Falhas não funcionais, como vulnerabilidades de segurança, eficiência de
+desempenho inadequada sob altas cargas ou operação inadequada em uma plataforma suportada.
+
+Exemplo: 
+
+Por exemplo, em um sistema de e-commerce, o teste de aceitação pode simular uma compra completa feita por um usuário real: acessar o site, fazer login, escolher um produto, calcular o frete, realizar o pagamento e receber a confirmação. O cliente avalia se todo o processo funciona de forma simples, correta e dentro das expectativas.
+Se o sistema permitir que o usuário finalize a compra sem erros, apresentar o valor correto e enviar a confirmação, o teste de aceitação é considerado aprovado. Caso contrário, o software não está pronto para ser entregue.
+Esse tipo de teste é essencial porque garante que o produto final esteja de acordo com o que foi contratado e que realmente satisfaça o usuário.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                      Tipos de Teste
+
+Teste funcional: avaliam as funções que o sistema deve executar;
+
+Teste não funcional: avaliam as características de sistemas e de softwares,
+como usabilidade, eficiência de desempenho ou segurança;
+
+Teste caixa-branca: voltado para a cobertura de código;
+
+Teste relacionado à mudança: executados apenas quando são feitas
+alterações em um sistema, para confirmar se atende a demanda.
+
+Nota:
+É possível executar qualquer um dos tipos de teste
+mencionados em qualquer nível de teste.
+
+                                          Técnicas de Teste:
+                                          Teste caixa-preta
+                                          Teste caixa-branca
+                                          Teste baseadas na experiência
+
+                  Técnicas de Teste Caixa-Preta:
+
+Particionamento de equivalência:
+
+Imagine que você esteja testando um campo de entrada que aceita números
+de 1 a 100.
+
+Você dividiria os números em três conjuntos:
+1 - Números abaixo de 1
+2 - Números entre 1 e 100
+3 - Números acima de 100
+
+Então, testaria um número de cada conjunto para garantir que o sistema os
+manipule corretamente.
+
+Análise de valor limite:
+
+Se um campo aceita valores de 1 a 100, você testaria os
+valores 1, 2, 99 e 100.
+
+Isso garante que os limites (1 e 100) e os valores
+próximos aos limites (2 e 99) sejam testados.
+
+Dica: Pensem no limite do IF
+
+Teste de tabela de decisão:
+
+Imagine um sistema que concede empréstimos com base na idade e na
+renda do cliente.
+
+Você criaria uma tabela com combinações de idade e renda que devem ou
+não ser aprovadas para um empréstimo e testaria essas combinações.
+
+EX: Maior de 18 e renda maior de mil reais
+
+idade / Renda Mensal (R$) / Elegível para Empréstimo ?
+  16  /     600           / Não
+  40  /     800           / Não
+  17  /     2500          / Não
+  20  /     2000          / Sim
+
+Teste de transição de estado:
+
+Em um sistema de controle de temperatura, você testaria as transições
+entre os diferentes estados do sistema e o comportamento esperado com
+relação ao estádo:
+
+Aquecendo: Temperatura aumenta, até X valor.
+Resfriando: Temperatura diminui até X valor.
+Neutro: Temperatura se mantém em X valor.
+
+Teste de caso de uso:
+
+Para um sistema de login, você criaria casos de teste para
+diferentes cenários de uso, como por exemplo:
+
+Login bem-sucedido;
+Login com senha incorreta;
+Tentativa de login sem um nome de usuário.
+
+Exemplo de Teste de Caixa Preto:
+
+Tela de Login
+
+Cenário: O usuário insere e-mail e senha para acessar um sistema.
+
+Entradas:
+
+Caso 1 (Positivo): E-mail válido e senha correta.
+Caso 2 (Negativo): E-mail inválido ou senha incorreta.
+Caso 3 (Limite): Campos vazios.
+
+Saída Esperada:
+
+Caso 1: Redirecionamento para o painel principal.
+Caso 2: Exibição da mensagem "Usuário ou senha inválidos".
+Caso 3: Exibição de mensagem solicitando o preenchimento dos campos. 
+
+                  Técnicas de teste caixa-branca
+
+Teste e cobertura de instruções:
+
+Você garantiria que cada linha de código seja executada
+pelo menos uma vez durante os testes.
+
+Teste de decisão e cobertura:
+
+Você garantiria que todas as decisões lógicas (if, else,
+switch, etc.) em um programa sejam testadas para ambas
+as condições verdadeiras e falsas.
+
+O Valor da instrução e teste de decisão:
+
+Além de garantir que cada instrução seja executada, você
+também testaria todas as possíveis condições dentro das
+decisões lógicas.
+
+                  Técnicas de teste baseadas na experiência
+
+Suposição de erro:
+
+Com base em experiências anteriores ou conhecimento
+do sistema, você antecipa onde os erros podem ocorrer e
+projeta casos de teste para cobrir esses pontos.
+
+Teste exploratório:
+
+Você explora o sistema sem um roteiro pré-definido,
+testando diferentes áreas e funcionalidades com base em
+sua intuição e conhecimento do sistema.
+
+Teste baseado em lista de verificação:
+
+Você segue uma lista de verificação predefinida para
+garantir que todos os aspectos críticos do sistema sejam
+testados, evitando assim a omissão de testes
+importantes.
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                      Erro, Defeito e Falha são a mesma coisa ?
+Curiosidade:
+
+Erro(engano): Erro humano produzindo resultado incorreto.
+
+Defeito(bug): É uma inconsistência no software, algo que foi
+implementado de maneira incorreta.
+
+Falha(diferença): É um comportamento inesperado do software.
+
+Psicologia humana e os testes:
+
+Viés de confirmação
+
+Como quem desenvolve acredita ter feito um bom trabalho, que está tudo correto, aceitar
+uma ideia oposta a essa é conflitante.
+“É um traço humano comum culpar o portador de más
+notícias, e as informações produzidas pelos testes muitas vezes contêm más notícias.
+”
+
+Syllabus:
+
+“A identificação de defeitos durante um teste estático, como uma revisão de requisitos ou
+sessão de refinamento da estória do usuário, ou a identificação de falhas durante a
+execução do teste dinâmico, pode ser percebida como uma crítica ao produto e ao seu
+autor. Um elemento da psicologia humana chamado ‘viés de confirmação’ pode dificultar a
+aceitação das informações que não concordam com as crenças atualmente mantidas.
+Por exemplo, como os desenvolvedores esperam que o código esteja correto, eles têm um
+viés de confirmação que dificulta a aceitação do código incorreto.
+Além do viés de confirmação, outros vieses cognitivos podem dificultar que as pessoas
+entendam ou aceitem informações produzidas por testes. Além disso, é um traço humano
+comum culpar o portador de más notícias, e as informações produzidas pelos testes muitas
+vezes contêm más notícias.
+”
