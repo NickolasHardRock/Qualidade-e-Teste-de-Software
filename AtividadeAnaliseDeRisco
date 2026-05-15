@@ -1,0 +1,27 @@
+° Exercício
+  Seu objetivo será, analisar os casos reportados e identificar:
+    Probabilidade.
+    Impacto.
+    Matriz do Risco.
+    Estratégia de mitigação.
+    Teste utilizado.
+Classifique os possíveis Tipos de Risco atrelado ao problema e
+descreva-os.
+
+Exemplo:
+  2. Risco: Bugs críticos na interface do usuário
+  * Probabilidade: C
+  * Impacto: 4
+  * Matriz do Risco: C4 - Alto
+  * Testes utilizados: Teste funcional, Teste de regressão, Teste de usabilidade, Teste
+  automatizado E2E
+  * Estratégia de mitigação: Implementar testes de aceitação automatizados e revisões de
+  código rigorosas para detectar e corrigir bugs na interface do usuário antes do
+  lançamento.
+  * Tipos de Risco:
+    ° Técnico: Falhas no frontend, ausência de padronização visual, erros de renderização,
+    componentes mal implementados ou ausência de testes automatizados.
+    ° Humano: Usuário interpreta incorretamente botões, mensagens ou fluxos devido à
+    interface confusa.
+    ° Negócio: Usuários podem abandonar o sistema, gerar reclamações ou reduzir
+    conversão de vendas.
