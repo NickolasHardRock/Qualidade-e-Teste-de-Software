@@ -25,3 +25,63 @@ Exemplo:
     interface confusa.
     ° Negócio: Usuários podem abandonar o sistema, gerar reclamações ou reduzir
     conversão de vendas.
+
+Exercício
+
+  Cenário 1: Interrupção Temporária do Serviço devido a
+  Manutenção Programada
+  
+  ° O serviço é temporariamente interrompido para
+  realizar manutenção programada, afetando
+  temporariamente a acessibilidade, mas sem danos
+  permanentes.
+
+  Risco: Interrupção Temporária do Serviço devido a
+  Manutenção Programada
+  * Probabilidade: D
+  * Impacto: 1
+  * Matriz do Risco: D1 - Baixo
+  * Testes utilizados: Teste funcional, Teste
+  automatizado E2E
+  * Estratégia de mitigação: Implementar testes de revisão do sistema após a manutenção para 
+  verificar se nenhuma parte do sistema foi comprometida.
+  * Tipos de Risco:
+    ° Humano: A técnico de manutenção deixou de fazer alguma manutenção.
+    ° Operacional: A manutenção causou algum problema.
+
+  Cenário 2: Vulnerabilidade de Segurança Descoberta
+    em uma Dependência de Terceiros
+
+  ° Uma vulnerabilidade crítica é descoberta em uma
+  biblioteca de terceiros usada pelo aplicativo,
+  permitindo ataques de hackers para acessar dados
+  sensíveis dos usuários.
+
+  Risco: Vulnerabilidade de Segurança Descoberta
+    em uma Dependência de Terceiros
+  * Probabilidade: C
+  * Impacto: 5
+  * Matriz do Risco: C5 - Muito Alto
+  * Testes utilizados: Teste de Componentes, Teste de integração
+  * Estratégia de mitigação: Implementar testes de revisão de APIs externas e teste de segurança regulares.
+  * Tipos de Risco:
+    ° Técnico: A vulnerabilidade é usada para acessar os dados.
+    ° Negócio: Perda da confiança dos clientes e problemas jurídicos.
+
+  Cenário 3: Erro de Interface do Usuário que Causa
+  Confusão entre os Usuários
+  
+  ° Uma alteração na interface do usuário causa
+  confusão entre os usuários, mas não afeta a
+  funcionalidade básica do aplicativo.
+    
+  Risco: Erro de Interface do Usuário que Causa
+    Confusão entre os Usuários
+    * Probabilidade: C
+    * Impacto: 3
+    * Matriz do Risco: C3 - Médio
+    * Testes utilizados: Teste E2E, Teste de aceitação
+    * Estratégia de mitigação: Implementar revisões nas alterações de interface.
+    * Tipos de Risco:
+      ° Negócio: Perda da confiança dos clientes.
+  
