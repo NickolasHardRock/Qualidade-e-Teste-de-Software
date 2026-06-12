@@ -1,0 +1,97 @@
+---Automação---
+Automação de testes é o processo de usar ferramentas e
+scripts para executar testes de software de forma
+automatizada, sem intervenção humana direta. Esses
+testes automatizados são projetados para simular as
+ações e interações do usuário com o software,
+verificando se ele funciona conforme o esperado e
+detectando eventuais erros ou defeitos.
+
+Script de Teste: Um script de teste é um conjunto de
+instruções ou comandos que automatizam uma determinada
+ação ou cenário de teste. Os scripts de teste são escritos
+usando linguagens de script ou ferramentas específicas de
+automação de teste.
+
+Framework de Teste: Um framework de teste é uma estrutura
+que fornece suporte para escrever e executar testes
+automatizados de forma organizada e eficiente. Ele pode incluir
+bibliotecas de funções, utilitários de relatórios, configurações de
+ambiente e outras ferramentas para simplificar o processo de
+automação de teste.
+
+Seletores e Asserts: Seletores são usados para identificar
+elementos na interface do usuário ou no código que serão
+manipulados durante o teste. Asserts são usados para verificar
+se o comportamento esperado do software está ocorrendo
+durante a execução do teste, comparando o resultado real com
+o esperado.
+
+Dados de Teste: Dados de teste são os inputs necessários para
+executar os testes automatizados. Isso pode incluir dados de
+entrada, configurações de ambiente, estados iniciais e
+resultados esperados.
+
+Relatórios de Teste: Relatórios de teste são documentos ou
+registros que fornecem detalhes sobre os resultados dos testes
+automatizados, incluindo os testes que foram executados, os
+resultados obtidos e quaisquer problemas ou falhas
+encontrados durante a execução dos testes.
+
+Reprodutibilidade: Um dos principais benefícios da
+automação de testes é a capacidade de reproduzir
+consistentemente os mesmos testes várias vezes. Isso garante
+que o comportamento do software seja consistente em
+diferentes ambientes e condições.
+
+Teste Unitário: Teste unitário é um tipo de teste automatizado
+que verifica a funcionalidade de unidades individuais de código,
+como métodos ou funções, isoladamente do restante do
+sistema. Eles são geralmente escritos pelos próprios
+desenvolvedores e são executados durante o processo de
+compilação ou integração contínua.
+
+Teste de Integração: Teste de integração é um tipo de teste
+automatizado que verifica a interação entre diferentes
+componentes ou módulos de um sistema para garantir que
+funcionem corretamente juntos. Eles são projetados para
+identificar problemas de integração entre partes do software.
+
+
+---Ferramentas de automação---
+1. Disponibiliza uma estrutura de testes (Mocha, Jasmine, Jest, Cucumber);
+2. Prove funções de validação (assert) (Chai, Jasmine, Jest, Unexpected);
+3. Gera, mostra (display) e observa (watch) o resultado dos testes (Mocha,
+Jasmine, Jest, Karma);
+4. Gera e compara snapshots do componente e estrutura de dados, para
+garantir que as mudanças anteriores foram como o planejado (Jest, Ava);
+5. Prove mocks, spies, e stubs (Sinon, Jasmine, enzyme, Jest, testdouble)
+6. Gera relatórios de cobertura de código (code coverage) Istanbul, Jest,
+Blanket);
+7. Prove um navegador, ou ambiente parecido, com controle sobre seus
+cenários de execução (Protractor, Nightwatch, Phantom, Casper).
+(Cypress, Groovy, Katalon)
+
+JEST
+A biblioteca Jest é uma estrutura de teste em
+JavaScript amplamente utilizada, projetada
+principalmente para testar código JavaScript
+e aplicações construídas com tecnologias
+como Node.js, React, Vue.js e muito mais. Ela
+fornece um conjunto abrangente de recursos
+e ferramentas para facilitar a criação,
+execução e análise de testes automatizados.
+
+---Cobertura de teste---
+A cobertura de testes, também conhecida como "cobertura de código",
+é uma métrica que indica a porcentagem de código fonte do seu software
+que é exercida por testes automatizados
+
+1. Identificação de Áreas Não Testadas;
+2. Aumento da Confiabilidade;
+3. Facilita a Manutenção;
+4. Melhoria na Qualidade do Código;
+5. Feedback Rápido;
+6. Documentação Viva;
+7. Apoio a Processos de Integração Contínua (CI) e Entrega Contínua (CD);
+
